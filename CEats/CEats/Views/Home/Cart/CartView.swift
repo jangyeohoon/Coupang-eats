@@ -50,7 +50,6 @@ struct CartView: View {
                     CartDeliveryView(isOpenMapSheet: $isOpenMapSheet)
                     CartMenuView()
                     CartPayView()
-
                     CartPayButtonView(showingAlert: $showingAlert)
                 }
                 
@@ -66,7 +65,7 @@ struct CartView: View {
                         Text("결제하기")
                     }
                 } message: {
-                    //                Text("주문이 성공적으로 완료되었습니다.")
+                    Text("주문이 성공적으로 완료되었습니다.")
                 }
                 
                 .onChange(of: tabViewModel.tabIndex) { _ in

@@ -11,7 +11,6 @@ struct AddCartView: View {
     @EnvironmentObject var userViewModel: UserViewModel
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
-    //@State private var numberOfFoods: Int = 1
     @State private var showAlert: Bool = false
     
     let restaurant: Restaurant

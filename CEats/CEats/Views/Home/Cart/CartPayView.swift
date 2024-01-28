@@ -40,7 +40,6 @@ struct CartPayView: View {
                 .font(.title3)
                 .bold()
                 .padding()
-                //                Divider()
                 
                 HStack {
                     Text("요청사항")
@@ -64,7 +63,6 @@ struct CartPayView: View {
                 }
                 Divider()
                 if isappeal {
-                    // CartappealView 가 보임.
                     CartAppealView()
                 }
                 HStack {
@@ -74,8 +72,6 @@ struct CartPayView: View {
                         .padding()
                     Spacer()
                     Button {
-                        // 눌리면 꺾새 내려가게 해야함.
-                        // CartPaymentView 가 보임
                         ispayment.toggle()
                     } label: {
                         Image(systemName: ispayment ? "chevron.down" : "control")

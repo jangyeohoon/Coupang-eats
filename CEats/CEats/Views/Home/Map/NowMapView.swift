@@ -17,10 +17,7 @@ struct NowMapView: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    //    @ObservedObject var locationManager: LocationManager = LocationManager()
-    
     @Binding var isOpenMapSheet: Bool
-    
     @Binding var isSelectedPlace: String
     @Binding var selectedPlaceLat: Double
     @Binding var selectedPlaceLong: Double
@@ -51,7 +48,6 @@ struct NowMapView: View {
                         .offset(y:-(.screenHeight/3.5))
                 }
             }
-            //MapViewCoordinator(locationManager: locationManager)
             Text("\(place)")
                 .padding()
             
@@ -66,19 +62,6 @@ struct NowMapView: View {
                     .background(Color.blue)
             }
             .padding(.bottom)
-
-            
-//            Button {
-//                // 위도 경도 값 저장
-//                isSelectedPlace = place
-//                selectedPlaceLat = lat
-//                selectedPlaceLong = long
-//            } label: {
-//                Text("설정하기")
-//                    .padding(.horizontal, 100)
-//                    .padding(.vertical, 10)
-//            }
-//            .buttonStyle(.borderedProminent)
         }
         .navigationTitle("주소 설정")
         .navigationBarTitleDisplayMode(.inline)
@@ -94,20 +77,16 @@ struct NowMapView: View {
             }
         }
         .onTapGesture(perform: {
-            showMessage = false //사용자가 터치하는 순간 바꾸고 싶음..
+            showMessage = false
         })
         .task {
             showMessage = true
         }
     }
-    
-    // CLLocation의 위도, 경도 값을 주소값으로 변경해주는 함수
-    // 함수 호출 과정 중, MapKit의 애플 서버 연동 과정 중 에러가 발생할 경우가 있음
-    // 조금 기다리면 다시 정상 작동하지만, 빠르게 위도와 경도값이 바뀌는 경우 조금 시간이 걸림
+
     func convertLocationToAddress(location: CLLocation) {
         
         let geocoder = CLGeocoder()
-        
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
             if error != nil {
                 self.isChangingPlace = false
@@ -145,22 +124,6 @@ extension MKCoordinateRegion: Equatable {
         lhs.span.longitudeDelta == rhs.span.longitudeDelta
     }
 }
-
-//struct MapViewCoordinator: UIViewRepresentable {
-//
-//    @ObservedObject var locationManager: LocationManager
-//
-//    func makeUIView(context: Context) -> some UIView {
-//        return locationManager.mapView
-//    }
-//
-//    func updateUIView(_ uiView: UIViewType, context: Context) {
-//
-//    }
-//
-//}
-
-
 
 struct NowMapView_previews: PreviewProvider {
     static var previews: some View {

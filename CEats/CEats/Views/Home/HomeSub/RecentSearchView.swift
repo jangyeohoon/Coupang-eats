@@ -23,14 +23,6 @@ struct RecentSearchView: View {
                 Text("01.13")
                     .font(.footnote)
                     .foregroundColor(.secondary)
-                /*
-                Button {
-                    
-                } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.secondary)
-                }
-                 */
             }
             .padding(.top,10)
         }

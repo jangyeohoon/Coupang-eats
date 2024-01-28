@@ -16,7 +16,6 @@ struct RTRFoodListView: View {
                 Text(category)
                     .padding(.top,20)
                     .font(.title2)
-                    //.font(.system(size: 19, weight: .medium))
                 Text("메뉴 사진은 연출된 이미지로 실제 조리된 음식과 다를 수 있습니다.")
                     .font(.footnote)
                     .foregroundColor(.secondary)

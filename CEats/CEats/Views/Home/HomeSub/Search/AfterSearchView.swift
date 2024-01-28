@@ -20,7 +20,6 @@ struct AfterSearchView: View {
     // MARK: - Views
     var body: some View {
         NavigationStack {
-            // FoodType으로 먼저 분류 -> 분류된 목록에서 ForEach로 반복
             if restaurantsStore.filterFoodName(data).isEmpty {
                 Text("검색결과가 없습니다")
                     .padding(50)
@@ -60,7 +59,7 @@ struct AfterSearchView: View {
                                         .bold()
                                         .padding(.bottom,0.1)
                                     Spacer()
-                                    Text("35~45 분") //배달시간 프로퍼티가 업서요~ 필요할거 같아요 이게 오더에 있어요.
+                                    Text("35~45 분")
                                         .foregroundColor(.gray)
                                         .font(.subheadline)
                                 }

@@ -30,12 +30,7 @@ struct User: Identifiable, Codable, CEatsIdentifiable, Equatable {
         var restaurantName: String {
             return restaurant.name
         }
-        var cart: [Restaurant.Food] // [filter] 푸드의 이름이 같은 것 count 해서 숫자 사용
-//        var fee: Int {
-//            let totalFoodFee = cart.map({ $0.price * $0.foodCount }).reduce(0) { $0 + $1 }
-//            return totalFoodFee + restaurant.deliveryFee
-//        }
-        
+        var cart: [Restaurant.Food] 
     }
 }
 

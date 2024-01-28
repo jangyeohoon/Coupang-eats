@@ -43,10 +43,6 @@ struct HomeView: View {
             }
             .padding(.top, 1)
         }
-//        .refreshable {
-//            userViewModel.fetchUser {
-//            }
-//        }
         .onAppear{
             userViewModel.fetchUser {
             }

@@ -12,14 +12,6 @@ struct MapSearchDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var userViewModel: UserViewModel
     @Binding var isOpenMapSheet: Bool
-    
-    /// SearchView에서 MapDetailView로 이동했을 때,
-    /// @Binding 값으로 되어 있어서 앱이 자꾸 멈추는 오류 발생
-    /// 해결책 - 검색 이후에 넘어가는 DetailView를 따로 만들어서
-    /// @State 값으로 변경하여 넘기는 값만 가지고 보여주도록 변경
-    ///
-    /// 예상 문제 원인 - 기존에는 MapDetailView를 검색을 하거나 맵을 통해서
-    /// 위치 설정을 했을 때 같은 화면으로 이동하도록 해서 @Binding 값을 사용함
     @State var selectedPlace: String
     @State var selectedPlaceLat: Double
     @State var selectedPlaceLong: Double

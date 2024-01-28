@@ -17,7 +17,6 @@ struct MapSearchView: View {
     
     @State private var searchText: String = ""
     @State private var searchResults: [MKMapItem] = []
-//    @State private var selectedMapItem: MKMapItem?
     
     var body: some View {
         VStack {

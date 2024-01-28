@@ -29,6 +29,4 @@ enum FoodType: String, CaseIterable, Identifiable, Codable {
    case coffeeAndTea = "커피"
    case dessert = "디저트"
    case fastFood = "패스트푸드"
-   
-//   var id: String { self.rawValue }
 }

@@ -23,7 +23,6 @@ struct RecommendRestaurantView: View {
                             .opacity(0.5)
                     }
                 }
-            
             Text(restaurant.name)
                 .padding(.top,10)
                 .padding(.bottom,2)

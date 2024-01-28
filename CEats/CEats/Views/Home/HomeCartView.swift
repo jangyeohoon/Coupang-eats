@@ -27,12 +27,6 @@ struct HomeCartView: View {
                         }
                         Text("카트보기")
                         Spacer()
-//                        ZStack{
-//                            Rectangle()
-//                                .frame(width: 80, height: 1)
-//                            Text("\(user.foodCart?.fee ?? 0) 원")
-//                        }
-//                        .foregroundColor(.lightgray)
                         
                         Text("\(userViewModel.cartFee + userViewModel.deliveryOpt.fee) 원")
                             .font(.system(size: 18, weight: .bold))

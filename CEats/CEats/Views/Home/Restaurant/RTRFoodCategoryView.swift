@@ -40,11 +40,6 @@ struct RTRFoodCategoryView: View {
             }
             .overlay(Divider().offset(x:0,y:30))
         }
-//        .onAppear {
-//            if !categories.isEmpty {
-//                selected = categories[0]
-//            }
-//        }
     }
 }
 

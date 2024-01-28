@@ -37,20 +37,6 @@ final class UserViewModel: ObservableObject {
             return user.orderHistory.filter { $0.orderStatus == .waiting }
         }
     }
-    
-    //    func recommendFoods(food: [Restaurant.Food]?, restaurant: Restaurant?) -> [Restaurant.Food] {
-    //        var menus = restaurant!.menus
-    //
-    //        if menus.count < 3 {
-    //            return restaurant!.menus
-    //        }
-    //
-    //        for selectedFood in food {
-    //            menus.removeAll { $0.name == selectedFood.name }
-    //        }
-    //
-    //        return menus
-    //    }
       
     func calculateDateDifference(previous: Date) -> (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?) {
         let day = Calendar.current.dateComponents([.day], from: previous, to: currentDate).day
@@ -87,10 +73,6 @@ final class UserViewModel: ObservableObject {
             user.foodCart?.cart.remove(at: index)
         }
     }
-//    func updateFavoriteRTR(isFavorite: [Restaurant]) {
-//        fireManager.update(data: user, value: \.favoriteRestaurant, to: isFavorite) { _ in
-//        }
-//    }
     
     func updateFavoriteRTR(user: User) {
         fireManager.create(data: user)

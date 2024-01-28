@@ -104,10 +104,8 @@ struct CartDeliveryView: View {
         Button {
             dismiss()
         } label: {
-//            Image(systemName: "xmark")
             Image(systemName: "arrow.left")
                 .bold()
-//                .aspectRatio(contentMode: .fit)
                 .foregroundStyle(.foreground)
         }
     }

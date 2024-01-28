@@ -16,8 +16,6 @@ struct ReviewInfo: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                // Image("\(review.image)") 이미지 없는게 많아서 일단 Asset에 추가한 이미지 올렸습니다.
-                //만약 이미지가 없으면 대체 이미지로 나타나게.
                 if (review.image != nil) {
                     Image(review.image!)
                         .resizable()
@@ -67,8 +65,7 @@ struct ReviewInfo: View {
                                 }
                             }
                         }
-//                        Spacer()
-                            .padding(.bottom, 10)
+                        .padding(.bottom, 10)
                         VStack(alignment: .leading) {
                             Text("구매 날짜 :         \(review.createdDate)")
                                 .font(.system(size: 20, weight: .semibold))

@@ -80,8 +80,6 @@ struct ReviewInfoView: View {
                             currentSortOption = option
                             currentSortOption.sort(reviewList: &restaurant.reviews)
                             showSortSheet = false
-                            // 선택한 정렬 옵션에 따라 데이터를 정렬하는 로직을 추가하세요.
-                            // 예: 최신순, 도움순, 별점 높은 순, 별점 낮은 순 등
                         } label: {
                             Text(option.rawValue)
                                 .foregroundColor(.black)

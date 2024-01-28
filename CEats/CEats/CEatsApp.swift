@@ -20,7 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct CEatsApp: App {
-    // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var restaurantViewModel = RestaurantViewModel()
     @StateObject var userViewModel = UserViewModel()
@@ -44,7 +43,6 @@ struct CEatsApp: App {
                 }
             }
             .onAppear {
-            // resetFirebaseData()
                 userViewModel.login()
                 restaurantViewModel.fetchAllRestaurant()
             }

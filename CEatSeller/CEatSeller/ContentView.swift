@@ -31,7 +31,6 @@ struct ContentView: View {
         }
         .onAppear {
             sellerviewModel.login()
-//            sellerviewModel.fireManager.create(data: sellerviewModel.seller)
         }
         .sheet(isPresented: $sellerviewModel.hasNewOrder) {
             NewOrderView()

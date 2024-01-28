@@ -34,19 +34,6 @@ struct MyPageRestaurantView: View {
                         Text("\(restaurant.scoreMessage)(\(restaurant.reviews.count))")
                     }
                     Text("\(restaurant.deliveryTime) · \(restaurant.deliveryFee)")
-//                    HStack {
-//                        Image(systemName: "tag.fill")
-//                            .foregroundColor(.blue)
-//                            .opacity(0.6)
-//                        Text("1,000원 쿠폰")
-//                    }
-//                    .bold()
-//                    .padding(3)
-//                    .padding(.horizontal, 3)
-//                    .background(
-//                        RoundedRectangle(cornerRadius: 5)
-//                            .opacity(0.6)
-//                    )
                 }
                 .foregroundColor(.primary)
                 Spacer()

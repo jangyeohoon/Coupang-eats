@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeSearchDetailView: View {
-    
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var restaurantViewModel: RestaurantViewModel
     @EnvironmentObject var userViewModel: UserViewModel
@@ -23,7 +22,7 @@ struct HomeSearchDetailView: View {
             VStack{
                 ZStack{
                     Rectangle()
-                        .frame(width: 350,height: 45) //뷰 바운드로 수정
+                        .frame(width: 350,height: 45)
                         .foregroundColor(.white)
                         .cornerRadius(30)
                         .shadow(radius: 2)
@@ -31,12 +30,10 @@ struct HomeSearchDetailView: View {
                         HStack{
                             Image(systemName: "magnifyingglass")
                             TextField("\(userViewModel.user.username)님, 서브웨이 어때요?", text: $searchText)
-                            //TextField 수정자
                                 .focused($isFocused)
                                 .onSubmit{
                                     isSubmit.toggle()
-                                    
-                            }
+                                }
                                 .onAppear {
                                     isFocused = true
                                 }
@@ -51,7 +48,6 @@ struct HomeSearchDetailView: View {
                             }
                         }
                         .padding(.leading,40)
-
                     }
                 }
                 
@@ -70,11 +66,10 @@ struct HomeSearchDetailView: View {
             }
         }
         .onAppear {
-                   if isFocused == false {
-                       // 포커스가 잃어진 경우 키보드 숨기기
-                      hideKeyboard()
-                   }
-               }
+            if isFocused == false {
+                hideKeyboard()
+            }
+        }
         .sheet(isPresented: $isSubmit) {
             AfterSearchView(data: searchText)
         }

@@ -13,7 +13,6 @@ struct BusinessHourView: View {
     
     var body: some View {
         NavigationStack{
-            
             VStack(alignment: .leading){
                 HStack{
                     Spacer()

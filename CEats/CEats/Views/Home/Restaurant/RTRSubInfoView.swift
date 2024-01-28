@@ -35,13 +35,6 @@ struct RTRSubInfoView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Text("\(restaurant.deliveryFee)")
-//                        Button("자세히") {
-//
-//                        }
-//                        .foregroundColor(.primary)
-//                        .padding(.horizontal, 10)
-//                        .background(.quaternary)
-//                        .cornerRadius(.greatestFiniteMagnitude)
                     }
                     Text("\(restaurant.minimumPrice)")
                 }

@@ -24,21 +24,6 @@ struct SliderView: View {
                 }
             })
             .frame(width: .screenWidth, height: .screenHeight * 0.2)
-//        TabView(selection: $selection) {
-//            ForEach(0..<2) { i in
-//                Image("\(images[i])")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//            }
-//            .tabViewStyle(PageTabViewStyle())
-//            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-//            .onReceive(timer, perform:  { _ in
-//                withAnimation {
-//                    selection = selection < 2 ? selection + 1 : 0
-//                }
-//            })
-//        }
-//        .frame(width: .screenWidth, height: .screenHeight * 0.2)
     }
 }
 
